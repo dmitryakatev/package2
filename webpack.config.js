@@ -14,6 +14,7 @@ module.exports = () => {
 			path: path.resolve(__dirname, './dist'),
 			filename: './index.js',
 			library: 'Package2',
+			libraryTarget: 'umd',
 			clean: true,
 		},
 	
@@ -23,13 +24,6 @@ module.exports = () => {
 			extensions: ['.ts', '.js'],
 		},
 
-		devServer: {
-			static: {
-				directory: path.join(__dirname, 'dist'),
-			},
-			compress: true,
-		},
-	
 		module: {
 			rules: [{
 				test: /\.ts$/,

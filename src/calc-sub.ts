@@ -1,20 +1,20 @@
-import type { Calc } from 'package1'
+import { Calc } from 'package1'
 
 export type CalcSubOptions = {
-    value: number
-    calc: Calc
+    value1: number
+    value2: number
 }
 
 export class CalcSub {
-    private value: number
-    private c: Calc
+    private value1: number
+    private calc1: Calc
 
     constructor(options: CalcSubOptions) {
-        this.c = options.calc
-        this.value = options. value
+        this.value1 = options.value1
+        this.calc1 = new Calc({ value: options.value2 })
     }
 
     public calc(): number {
-        return this.c.calc() - this.value
+        return this.value1 - this.calc1.calc()
     }
 }

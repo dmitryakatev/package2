@@ -1,11 +1,10 @@
-import type { Calc } from 'package1';
 export type CalcSubOptions = {
-    value: number;
-    calc: Calc;
+    value1: number;
+    value2: number;
 };
 export declare class CalcSub {
-    private value;
-    private c;
+    private value1;
+    private calc1;
     constructor(options: CalcSubOptions);
     calc(): number;
 }
