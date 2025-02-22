@@ -24,6 +24,10 @@ module.exports = () => {
 			extensions: ['.ts', '.js'],
 		},
 
+		externals: {
+			package1: 'package1',
+		},
+
 		module: {
 			rules: [{
 				test: /\.ts$/,
